@@ -41,7 +41,7 @@ public class Sikulixtestg {
 		s.click("/home/administrator/eclipse-workspace/Demomaven/closebtn.png");*/
 		
 		//xifinlogin
-		driver.get("https://osbremote.xifin.net/portal/webclient/index.html");
+		/* driver.get("https://osbremote.xifin.net/portal/webclient/index.html");
 		sleep(10000);
 		s.click("/home/administrator/eclipse-workspace/Demomaven/images/accept.png");
 		sleep(5000);
@@ -59,7 +59,7 @@ public class Sikulixtestg {
 		sleep(2000);
 		s.type("/home/administrator/eclipse-workspace/Demomaven/images/passrd.png","Thar@123");
 		sleep(2000);
-		s.click("/home/administrator/eclipse-workspace/Demomaven/images/xifinlogin.png");
+		s.click("/home/administrator/eclipse-workspace/Demomaven/images/xifinlogin.png");*/
 		
 	}
 	public static void sleep(int sleepTime) throws InterruptedException {

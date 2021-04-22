@@ -13,6 +13,7 @@ import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.sikuli.api.robot.Keyboard;
@@ -30,63 +31,7 @@ public class Epvxifinp
 	public static void main(String[] args) throws InterruptedException, FindFailed, IOException 
 	{
 		// TODO Auto-generated method stub
-	/*	File inputFile = new File("/home/administrator/eclipse-workspace/Demomaven/input/file1_to_process.xlsx");
-
-		FileInputStream file = new FileInputStream(inputFile);
-		XSSFWorkbook workbook = new XSSFWorkbook(file);
 		
-		XSSFSheet sheet = workbook.getSheetAt(0);
-		int topCount = sheet.getPhysicalNumberOfRows();
-		
-		Iterator<Row> rowIterator = sheet.iterator();
-		int count = 0;
-		int headerAvoid = 0;
-		
-		while (rowIterator.hasNext())
-		{
-
-			if (headerAvoid == 0) 
-			{
-				rowIterator.next();
-			}
-			headerAvoid = 1;
-			Row row = rowIterator.next();
-
-			// For each row, iterate through all the columns
-			Iterator<Cell> cellIterator = row.cellIterator();
-			boolean num_flag = false;
-			while (cellIterator.hasNext()) 
-			{
-				Cell cell = cellIterator.next();
-				// Check the cell type and format accordingly
-				cell.setCellType(Cell.CELL_TYPE_STRING);
-				if ((cell.getCellType() == Cell.CELL_TYPE_STRING)) 
-				{
-					count = count + 1;
-
-					if (count == 4) 
-					{
-						AID = cell.getStringCellValue();
-						continue;
-					}
-					continue;
-				}
-				if (count == 6) 
-				{
-						// ERRNOTE = cell.getStringCellValue();
-						count = 0;
-						continue;
-				}
-				count = 0;
-			}
-			System.out.println("AID - " + AID);
-			System.out.println();
-		
-			
-		}*/
-		
-
-//----------------------------
 	    sleep(5000);
 		Keyboard keyboard = new DesktopKeyboard();
 		ImagePath.setBundlePath("/home/administrator/eclipse-workspace/Demomaven/input-images");
@@ -124,10 +69,12 @@ public class Epvxifinp
 		sleep(3000);
 		s.click("detials.png");
 		sleep(2000);
-		String AID=" 105286136-2101";
-		s.type("accesseninputbox.png",AID);
+		Readfile aid=new Readfile();
+		String AIDD="AID";
+		s.type("accesseninputbox.png",AIDD);
 		sleep(2000);
 		s.click("accessensearchbtn.png");
+		
 		
 		//file.close();
 		
